@@ -6,3 +6,4 @@ altair
 matplotlib
 wordcloud
 nltk
+textblob
