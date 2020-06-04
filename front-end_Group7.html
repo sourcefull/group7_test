@@ -13115,38 +13115,16 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in nbinteract-hide_out
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Authors:</span>
-<span class="c1">#Guangjun Xue </span>
-<span class="c1">#Yuchen Zhang</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+<span class="c1">#nbi:hide_out</span>
 
-    </div>
-</div>
-</div>
-
-  </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="This-part-is-for-tuning-and-degbugging.-Please-skip-this-part">This part is for tuning and degbugging. Please skip this part<a class="anchor-link" href="#This-part-is-for-tuning-and-degbugging.-Please-skip-this-part">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
 
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 
@@ -13165,25 +13143,21 @@ div#notebook {
 </div>
 
   </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Part-I-:-Cloud-Map-Over-Time">Part I : Cloud Map Over Time<a class="anchor-link" href="#Part-I-:-Cloud-Map-Over-Time">&#182;</a></h1>
-</div>
-</div>
-</div>
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in nbinteract-hide_out
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+<span class="c1">#nbi:hide_out</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
 <span class="kn">import</span> <span class="nn">nltk</span>
+
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
-  
 </pre></div>
 
     </div>
@@ -13221,264 +13195,30 @@ div#notebook {
 </div>
 
   </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1>Group 7 Youtube Content Dashboards</h1><p><b><font size='3' color='Black'>Youtube Trends Over Time</b></p>
+<blockquote> How insane is it that sometimes you see the most amazing video on youtube, and yet it took nearly a decade for it to be popular? Or a subpar video which hits a million views within a week? A lot of it has to do with the way you market your content. Sponsoring advertisements for your posts helps, but it depends heavily on the textual supporting descriptions that you add. And an even deeper question is: what makes certain words more popular than others? What receives more hate by the public? Are certain topics more active during election years or during a pandemic? Fortunately, our platform and tools will figure it out for you. Our dashboards serve as proof of concept for how sentiment analysis can be extended to utility on a daily basis, with a very wide customer demographic.</blockquote>
+</div>
+</div>
+</div>
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#load data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data_project.p&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
-</pre></div>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#nbi:hide_in</span>
+<span class="c1">#container for the main interface</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">AppLayout</span><span class="p">,</span> <span class="n">Layout</span>
 
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#data set is dictionary of different genres</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#structure of data</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;gaming&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
+<span class="kn">from</span> <span class="nn">textblob</span> <span class="kn">import</span> <span class="n">TextBlob</span>
 
 
-<div class="output_area">
-
-    
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>words</th>
-      <th>frequency_time</th>
-      <th>likes_mean</th>
-      <th>likes_median</th>
-      <th>dislikes_mean</th>
-      <th>dislikes_median</th>
-      <th>views_mean</th>
-      <th>views_median</th>
-      <th>polarity</th>
-      <th>subjectivity</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>de</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>289307</td>
-      <td>83148</td>
-      <td>8170</td>
-      <td>922</td>
-      <td>11797320</td>
-      <td>2.67881e+06</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>spider</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>85202</td>
-      <td>85202</td>
-      <td>2546</td>
-      <td>2546</td>
-      <td>1607605</td>
-      <td>1.60760e+06</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>man</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>51336</td>
-      <td>45357</td>
-      <td>2621</td>
-      <td>2546</td>
-      <td>1904381</td>
-      <td>1954387</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>movie</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>60745</td>
-      <td>85202</td>
-      <td>1527</td>
-      <td>1752</td>
-      <td>2018628</td>
-      <td>1607605</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>no</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>93308</td>
-      <td>51631.5</td>
-      <td>2639</td>
-      <td>842</td>
-      <td>3860076</td>
-      <td>1.62977e+06</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>nights</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>909907</td>
-      <td>1.05289e+06</td>
-      <td>26645</td>
-      <td>22787</td>
-      <td>28426848</td>
-      <td>3.40112e+07</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>macleod</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>1192684</td>
-      <td>1.36038e+06</td>
-      <td>50532</td>
-      <td>42375</td>
-      <td>33584493</td>
-      <td>3.52528e+07</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>licensed</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>1209345</td>
-      <td>1.40469e+06</td>
-      <td>71738</td>
-      <td>91387</td>
-      <td>31893058</td>
-      <td>3.52528e+07</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>under</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>880178</td>
-      <td>1404397</td>
-      <td>52180</td>
-      <td>66088</td>
-      <td>23236308</td>
-      <td>35252760</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>creative</td>
-      <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...</td>
-      <td>760702</td>
-      <td>1245465</td>
-      <td>44750</td>
-      <td>50881</td>
-      <td>25588790</td>
-      <td>33241514</td>
-      <td>0.5</td>
-      <td>1.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>100 rows × 10 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">from</span> <span class="nn">matplotlib.pylab</span> <span class="kn">import</span> <span class="n">subplots</span>
 <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13486,6 +13226,8 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">IntSlider</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">matplotlib.image</span> <span class="kn">import</span> <span class="n">imread</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data_project.p&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
 
 <span class="n">year_end</span><span class="o">=</span><span class="mi">2019</span>
 <span class="n">year_start</span><span class="o">=</span><span class="mi">2015</span>
@@ -13565,23 +13307,8 @@ div#notebook {
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Complete!     &#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">fplot</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">fsx</span><span class="p">,</span><span class="n">Genre</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cooking&#39;</span><span class="p">,</span> <span class="s1">&#39;influencers&#39;</span><span class="p">,</span> <span class="s1">&#39;gaming&#39;</span><span class="p">])</span>
 <span class="c1">#display(interactive_plot)</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">acrosstime</span><span class="p">(</span><span class="n">dis_num</span><span class="p">,</span><span class="n">Genre</span><span class="p">):</span>   
+<span class="k">def</span> <span class="nf">acrosstime</span><span class="p">(</span><span class="n">dis_num</span><span class="p">,</span><span class="n">Genre</span><span class="p">):</span>   
     <span class="n">data_cloud</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">Genre</span><span class="p">]</span>
     <span class="n">freq</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data_cloud</span><span class="o">.</span><span class="n">frequency_time</span><span class="p">))</span>
     <span class="n">freq</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -13623,29 +13350,8 @@ div#notebook {
     <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
 <span class="n">acrossAlltime</span><span class="o">=</span><span class="n">interactive</span><span class="p">(</span><span class="n">acrosstime</span><span class="p">,</span><span class="n">dis_num</span><span class="o">=</span><span class="n">dis_num</span><span class="p">,</span><span class="n">Genre</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cooking&#39;</span><span class="p">,</span> <span class="s1">&#39;influencers&#39;</span><span class="p">,</span> <span class="s1">&#39;gaming&#39;</span><span class="p">])</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-  </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Part-II:-Like-and-Dislike">Part II: Like and Dislike<a class="anchor-link" href="#Part-II:-Like-and-Dislike">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Genre</span><span class="o">=</span> <span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cooking&#39;</span><span class="p">,</span> <span class="s1">&#39;influencers&#39;</span><span class="p">,</span> <span class="s1">&#39;gaming&#39;</span><span class="p">])</span>
+<span class="n">Genre</span><span class="o">=</span> <span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cooking&#39;</span><span class="p">,</span> <span class="s1">&#39;influencers&#39;</span><span class="p">,</span> <span class="s1">&#39;gaming&#39;</span><span class="p">])</span>
 <span class="c1">#Fsx = IntSlider(min=start_month,max=end_month,step=1,continuous_update=False,description=&#39;Time:&#39;)</span>
 <span class="n">Fsx</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">SelectionSlider</span><span class="p">(</span>
             <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span>
@@ -13734,29 +13440,13 @@ div#notebook {
 <span class="n">interactive_plot_like</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">Fplot</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">Fsx</span><span class="p">,</span><span class="n">Genre</span><span class="o">=</span><span class="n">Genre</span><span class="p">,</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;like&#39;</span><span class="p">)</span>
 <span class="n">interactive_plot_hate</span><span class="o">=</span><span class="n">interactive</span><span class="p">(</span><span class="n">Fplot</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">Fsx</span><span class="p">,</span><span class="n">Genre</span><span class="o">=</span><span class="n">Genre</span><span class="p">,</span><span class="n">like</span><span class="o">=</span><span class="s1">&#39;hate&#39;</span><span class="p">)</span>
 <span class="c1">#display(HBox([interactive_plot_like,interactive_plot_hate ]))</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
 
-  </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Part-III:-Text-Analysis">Part III: Text Analysis<a class="anchor-link" href="#Part-III:-Text-Analysis">&#182;</a></h1>
-</div>
-</div>
-</div>
 
-  
 
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">textblob</span> <span class="kn">import</span> <span class="n">TextBlob</span>
+
+
 <span class="k">def</span> <span class="nf">analyze_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">genre</span><span class="p">,</span> <span class="n">metric</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Purpose: </span>
@@ -13835,35 +13525,7 @@ div#notebook {
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Complete!     &#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="n">box</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">color_changer</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="n">w</span><span class="p">,</span><span class="n">Genre</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cooking&#39;</span><span class="p">,</span> <span class="s1">&#39;influencers&#39;</span><span class="p">,</span> <span class="s1">&#39;gaming&#39;</span><span class="p">],</span><span class="n">Metric</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;likes_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;likes_median&quot;</span><span class="p">,</span>
              <span class="s2">&quot;dislikes_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;dislikes_median&quot;</span><span class="p">,</span> <span class="s2">&quot;views_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;views_median&quot;</span><span class="p">,</span> <span class="s2">&quot;polarity&quot;</span><span class="p">,</span> <span class="s2">&quot;subjectivity&quot;</span><span class="p">])</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-  </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Overall">Overall<a class="anchor-link" href="#Overall">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Displays-below-will-be-presented-in-the-website.">Displays below will be presented in the website.<a class="anchor-link" href="#Displays-below-will-be-presented-in-the-website.">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#description of all three parts</span>
 <span class="n">descrip_part1</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">In this part, you can use our tools to create a word cloud of popular words in different time periods. Size of a word will be based on</span>
 <span class="s2">its popularity. </span>
@@ -13884,43 +13546,13 @@ div#notebook {
 <span class="n">Descrip_part1</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&lt;b&gt;&lt;font size=&#39;2&#39; color=&#39;Black&#39;&gt;</span><span class="si">{</span><span class="n">descrip_part1</span><span class="si">}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">)</span>
 <span class="n">Descrip_part2</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&lt;b&gt;&lt;font size=&#39;2&#39; color=&#39;Black&#39;&gt;</span><span class="si">{</span><span class="n">descrip_part2</span><span class="si">}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">)</span>
 <span class="n">Descrip_part3</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&lt;b&gt;&lt;font size=&#39;2&#39; color=&#39;Black&#39;&gt;</span><span class="si">{</span><span class="n">descrip_part3</span><span class="si">}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">)</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
 
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Tab</span><span class="p">()</span>
+<span class="n">tab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Tab</span><span class="p">()</span>
 <span class="n">tab</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">VBox</span><span class="p">([</span><span class="n">Descrip_part1</span><span class="p">,</span><span class="n">interactive_plot</span><span class="p">,</span><span class="n">status</span><span class="p">]),</span><span class="n">acrossAlltime</span><span class="p">]</span>
 <span class="n">tab</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Popular Keywords VS Month&#39;</span><span class="p">)</span>
 <span class="n">tab</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Popular Keywords across all time&#39;</span><span class="p">)</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#folder for different part</span>
 <span class="n">accordion</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Accordion</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">VBox</span><span class="p">([</span><span class="n">Descrip_part1</span><span class="p">,</span><span class="n">interactive_plot</span><span class="p">,</span><span class="n">status</span><span class="p">]),</span>
                                         <span class="n">VBox</span><span class="p">([</span><span class="n">Descrip_part2</span><span class="p">,</span>
                                               <span class="n">HBox</span><span class="p">([</span><span class="n">interactive_plot_like</span><span class="p">,</span><span class="n">interactive_plot_hate</span> <span class="p">]),</span><span class="n">status2</span><span class="p">]),</span>
@@ -13928,40 +13560,29 @@ div#notebook {
 <span class="n">accordion</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Popular Keywords over Time&#39;</span><span class="p">)</span>
 <span class="n">accordion</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Likes&amp;Dislikes over Time &#39;</span><span class="p">)</span>
 <span class="n">accordion</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Text Analysis &#39;</span><span class="p">)</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
 
-  </div>
 
-  
 
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#container for the main interface</span>
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">AppLayout</span><span class="p">,</span> <span class="n">Layout</span>
-<span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Youtube Trend over Time&#39;</span>
-<span class="n">Title</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&lt;b&gt;&lt;font size=&#39;5&#39; color=&#39;Black&#39;&gt;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">)</span>
-<span class="n">descrip</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;How insane is it that sometimes you see the most amazing video on youtube, </span>
-<span class="s2">and yet it took nearly a decade for it to be popular? Or a subpar video which hits a </span>
-<span class="s2">million views within a week? A lot of it has to do with the way you market your content. </span>
-<span class="s2">Sponsoring advertisements for your posts helps, but it depends heavily on the </span>
-<span class="s2">textual supporting descriptions that you add. And an even deeper question is: what makes certain </span>
-<span class="s2">words more popular than others? What receives more hate by the public? Are certain </span>
-<span class="s2">topics more active during election years or during a pandemic? Fortunately, our platform and tools will figure it out for you</span>
-<span class="s2">. We’re trying to create a simple </span>
-<span class="s2">platform which serves as a proof of concept for how sentiment analysis can be extended </span>
-<span class="s2">to utility on a daily basis, with a very wide customer demographic.</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">Descrip</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&lt;b&gt;&lt;font size=&#39;2&#39; color=&#39;Black&#39;&gt;</span><span class="si">{</span><span class="n">descrip</span><span class="si">}</span><span class="s2">&lt;/b&gt;&quot;</span><span class="p">)</span>
-<span class="n">AppLayout</span><span class="p">(</span><span class="n">header</span><span class="o">=</span><span class="n">VBox</span><span class="p">([</span><span class="n">Title</span><span class="p">,</span><span class="n">Descrip</span><span class="p">]),</span>
-          <span class="n">left_sidebar</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+
+
+
+<span class="c1">#title = &#39;Youtube Trend over Time&#39;</span>
+<span class="c1">#Title = widgets.HTML(value = f&quot;&lt;b&gt;&lt;font size=&#39;5&#39; color=&#39;Black&#39;&gt;{title}&lt;/b&gt;&quot;)</span>
+<span class="c1">#descrip=&quot;&quot;&quot;How insane is it that sometimes you see the most amazing video on youtube, </span>
+<span class="c1">#and yet it took nearly a decade for it to be popular? Or a subpar video which hits a </span>
+<span class="c1">#million views within a week? A lot of it has to do with the way you market your content. </span>
+<span class="c1">#Sponsoring advertisements for your posts helps, but it depends heavily on the </span>
+<span class="c1">#textual supporting descriptions that you add. And an even deeper question is: what makes certain </span>
+<span class="c1">#words more popular than others? What receives more hate by the public? Are certain </span>
+<span class="c1">#topics more active during election years or during a pandemic? Fortunately, our platform and tools will figure it out for you</span>
+<span class="c1">#. We’re trying to create a simple </span>
+<span class="c1">#platform which serves as a proof of concept for how sentiment analysis can be extended </span>
+<span class="c1">#to utility on a daily basis, with a very wide customer demographic.</span>
+<span class="c1">#&quot;&quot;&quot;</span>
+<span class="c1">#Descrip=widgets.HTML(value = f&quot;&lt;b&gt;&lt;font size=&#39;2&#39; color=&#39;Black&#39;&gt;{descrip}&lt;/b&gt;&quot;)</span>
+<span class="n">AppLayout</span><span class="p">(</span><span class="n">left_sidebar</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
           <span class="n">center</span><span class="o">=</span><span class="n">accordion</span><span class="p">,</span>
           <span class="n">right_sidebar</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
           <span class="n">footer</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
@@ -13992,23 +13613,6 @@ div#notebook {
 
 </div>
 
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
