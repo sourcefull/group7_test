@@ -1,9 +1,4 @@
 numpy
 ipywidgets
 nbinteract
-bokeh
-altair
 matplotlib
-wordcloud
-nltk
-textblob
